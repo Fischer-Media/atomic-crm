@@ -134,7 +134,7 @@ export const CRM = ({
     useEffect(() => {
         if (
             disableTelemetry ||
-            process.env.NODE_ENV !== 'production' ||
+            import.meta.env.MODE !== 'production' ||
             typeof window === 'undefined' ||
             typeof window.location === 'undefined' ||
             typeof Image === 'undefined'

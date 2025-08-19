@@ -7,36 +7,34 @@ export const defaultLogo = './logos/logo_atomic_crm.svg';
 export const defaultTitle = 'Atomic CRM';
 
 export const defaultCompanySectors = [
-    'Communication Services',
-    'Consumer Discretionary',
-    'Consumer Staples',
-    'Energy',
-    'Financials',
-    'Health Care',
-    'Industrials',
-    'Information Technology',
-    'Materials',
-    'Real Estate',
-    'Utilities',
+    'Andover Forrest / Hills',
+    'Hartland',
+    'Chevy Chase / Downtown',
+    'Hamburg',
+    'Landsdowne',
+    'Richmond',
+    'Versailles',
+    'Georgetown',
+    'Beaumont & East Side',
 ];
 
 export const defaultDealStages = [
     { value: 'opportunity', label: 'Opportunity' },
-    { value: 'proposal-sent', label: 'Proposal Sent' },
-    { value: 'in-negociation', label: 'In Negotiation' },
-    { value: 'won', label: 'Won' },
-    { value: 'lost', label: 'Lost' },
-    { value: 'delayed', label: 'Delayed' },
+    { value: 'pending-quote', label: 'Proposal Sent' },
+    { value: 'quote-sent', label: 'In Negotiation' },
+    { value: 'pending-deposit', label: 'Won' },
+    { value: 'won', label: 'Lost' },
+    { value: 'lost', label: 'Delayed' },
 ];
 
-export const defaultDealPipelineStatuses = ['won'];
+export const defaultDealPipelineStatuses = [
+    'closed'
+];
 
 export const defaultDealCategories = [
-    'Other',
-    'Copywriting',
-    'Print project',
-    'UI Design',
-    'Website design',
+    'Residential',
+    'Commercial',
+    'Other'
 ];
 
 export const defaultNoteStatuses = [
@@ -48,14 +46,16 @@ export const defaultNoteStatuses = [
 
 export const defaultTaskTypes = [
     'None',
-    'Email',
-    'Demo',
-    'Lunch',
-    'Meeting',
-    'Follow-up',
-    'Thank you',
-    'Ship',
-    'Call',
+    'Initial Contact',
+    'Onsite Visit',
+    'Send Quote',
+    'Follow-up on Quote',
+    'Purchase Material',
+    'Prepare Material',
+    'Notify Scheduled Install Date',
+    'Complete Install',
+    'Send Invoice',
+    'Send Thank You + Review Request',
 ];
 
 export const defaultContactGender = [
