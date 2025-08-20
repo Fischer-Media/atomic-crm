@@ -20,6 +20,9 @@
 .eslintcache
 .env.postmark
 
+.vscode*
+
+
 # .gitignore
 
 
