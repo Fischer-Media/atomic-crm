@@ -46,14 +46,14 @@ export const DealsChart = () => {
             return {
                 date: format(month, 'MMM'),
                 won: dealsByMonth[month]
-                    .filter((deal: Deal) => deal.stage === 'won')
+                    .filter((deal: Deal) => deal.stage === 'deposit-paid')
                     .reduce((acc: number, deal: Deal) => {
                         acc += deal.amount;
                         return acc;
                     }, 0),
                 pending: dealsByMonth[month]
                     .filter(
-                        (deal: Deal) => !['won', 'lost'].includes(deal.stage)
+                        (deal: Deal) => !['deposit-paid', 'lost'].includes(deal.stage)
                     )
                     .reduce((acc: number, deal: Deal) => {
                         // @ts-ignore
@@ -95,7 +95,7 @@ export const DealsChart = () => {
                 <ResponsiveBar
                     data={months}
                     indexBy="date"
-                    keys={['won', 'pending', 'lost']}
+                    keys={['deposit-paid', 'pending-deposit', 'lost']}
                     colors={['#61cdbb', '#97e3d5', '#e25c3b']}
                     margin={{ top: 30, right: 50, bottom: 30, left: 0 }}
                     padding={0.3}
@@ -130,7 +130,7 @@ export const DealsChart = () => {
                                 value: 0,
                                 lineStyle: { strokeOpacity: 0 },
                                 textStyle: { fill: '#2ebca6' },
-                                legend: 'Won',
+                                legend: 'Deposit Paid',
                                 legendPosition: 'top-left',
                                 legendOrientation: 'vertical',
                             },
