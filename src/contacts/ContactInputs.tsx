@@ -199,6 +199,7 @@ const ContactPersonalInformationInputs = () => {
                 helperText={false}
                 validate={isLinkedinUrl}
             />
+
         </Stack>
     );
 };
@@ -260,6 +261,13 @@ const ContactAddressInputs = () => {
                     source="postal_code"
                     label="ZIP"
                     helperText={false}
+                    sx={{ width: 160 }}
+                />
+                <TextInput
+                    source="state"
+                    label="State"
+                    helperText={false}
+                    parse={(v) => (typeof v === 'string' ? v.toUpperCase() : v)}
                     sx={{ width: 160 }}
                 />
             </Stack>
