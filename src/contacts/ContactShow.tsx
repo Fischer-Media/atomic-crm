@@ -24,6 +24,9 @@ const ContactShowContent = () => {
     const { record, isPending } = useShowContext<Contact>();
     if (isPending || !record) return null;
 
+    const addressLine1 = [record.address_line1, record.address_line2].filter(Boolean).join(', ');
+    const addressLine2 = [record.city, record.state, record.postal_code].filter(Boolean).join(', ');
+
     return (
         <Box mt={2} mb={2} display="flex">
             <Box flex="1">
@@ -35,6 +38,16 @@ const ContactShowContent = () => {
                                 <Typography variant="h5">
                                     {record.first_name} {record.last_name}
                                 </Typography>
+                                {addressLine1 && (
+                                    <Typography variant="body1">
+                                        {addressLine1}
+                                    </Typography>
+                                )}
+                                {addressLine2 && (
+                                    <Typography variant="body2" color="text.secondary">
+                                        {addressLine2}
+                                    </Typography>
+                                )}
                                 <Typography variant="body2" component="div">
                                     {record.title}
                                     {record.title &&

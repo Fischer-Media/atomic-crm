@@ -254,7 +254,7 @@ const ContactAddressInputs = () => {
                     source="city"
                     label="City"
                     helperText={false}
-                    sx={{ widht: 140 }}
+                    sx={{ width: 140 }}
                 />
                 <TextInput
                     source="postal_code"

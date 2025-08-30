@@ -97,6 +97,11 @@ export type Contact = {
     status: string;
     background: string;
     phone_jsonb: PhoneNumberAndType[];
+    address_line1?: string;
+    address_line2?: string;
+    city?: string;
+    state?: string;
+    postal_code?: string;
 
     nb_tasks?: number;
     company_name?: string;
