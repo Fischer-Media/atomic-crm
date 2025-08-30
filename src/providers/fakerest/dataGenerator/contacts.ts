@@ -4,8 +4,9 @@ import {
     lorem,
     name,
     phone,
-    random,
+    random
 } from 'faker/locale/en_US';
+
 
 import {
     defaultContactGender,
@@ -99,6 +100,12 @@ export const generateContacts = (db: Db, size = 500): Required<Contact>[] => {
                 .map(tag => tag.id), // finalize
             sales_id: company.sales_id,
             nb_tasks: 0,
+            address_line1: '123 Main St',
+            address_line2: '',
+            city: 'Lexington',
+            state: 'KY',
+            postal_code: '40502',
+            // existing fields…
             linkedin_url: null,
         };
     });
