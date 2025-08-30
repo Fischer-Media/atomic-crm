@@ -46,6 +46,7 @@ export const ContactInputs = () => {
                 />
                 <Stack gap={4} flex={5}>
                     <ContactPersonalInformationInputs />
+                    <ContactAddressInputs />
                     <ContactMiscInputs />
                 </Stack>
             </Stack>
@@ -232,6 +233,38 @@ const ContactMiscInputs = () => {
             </ReferenceInput>
         </Stack>
     );
+};
+
+const ContactAddressInputs = () => {
+    return (
+        <Stack>
+            <Typography variant="h6">Address</Typography>
+            <TextInput
+                source="address_line1"
+                label="Address"
+                helperText={false}
+            />
+            <TextInput
+                source="address_line2"
+                label="Address 2"
+                helperText={false}
+            />
+            <Stack direction="row" gap={2}>
+                <TextInput
+                    source="city"
+                    label="City"
+                    helperText={false}
+                    sx={{ widht: 140 }}
+                />
+                <TextInput
+                    source="postal_code"
+                    label="ZIP"
+                    helperText={false}
+                    sx={{ width: 160 }}
+                />
+            </Stack>
+        </Stack>
+    )
 };
 
 const saleOptionRenderer = (choice: Sale) =>
