@@ -23,6 +23,11 @@ export type ContactImportSchema = {
     status: string;
     tags: string;
     linkedin_url: string;
+    address_line1: string;
+    address_line2: string;
+    city: string;
+    state: string;
+    postal_code: string;
 };
 
 export function useContactImport() {
@@ -104,6 +109,11 @@ export function useContactImport() {
                         company: companyName,
                         tags: tagNames,
                         linkedin_url,
+                        address_line1,
+                        address_line2,
+                        city,
+                        state,
+                        postal_code
                     }) => {
                         const email_jsonb = [
                             { email: email_work, type: 'Work' },
@@ -143,6 +153,11 @@ export function useContactImport() {
                                 tags: tagList.map(tag => tag.id),
                                 sales_id: user?.identity?.id,
                                 linkedin_url,
+                                address_line1,
+                                address_line2,
+                                city,
+                                state,
+                                postal_code
                             },
                         });
                     }
